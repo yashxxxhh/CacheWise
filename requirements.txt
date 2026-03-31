@@ -1,0 +1,14 @@
+# ─── Core API ───────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# ─── Caching ────────────────────────────────────
+redis==5.0.4
+
+# ─── Background scheduler ───────────────────────
+apscheduler==3.10.4
+
+# ─── Optional ML (for AI pre-caching predictor) ─
+# Remove these two lines if you don't need AI prediction
+scikit-learn==1.4.2
+numpy==1.26.4

@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Local SQLite database
+smart_cache.db
+
+# PyCharm project files
+.idea/
+
+# Logs
+*.log
+
+# Environment variables
+*.env
+
+# VS Code settings
+.vscode/
