@@ -2,16 +2,19 @@
 db.py — SQLite database connection, schema creation, and query helpers.
 
 We use Python's built-in `sqlite3` module (zero install needed).
-Database file: smart_cache.db  (auto-created on first run)
 """
-
 import sqlite3
 import json
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 
-DB_PATH = Path(__file__).parent / "smart_cache.db"
+DB_PATH = "smart_cache.db"
 
+# Connect and list tables
+conn = sqlite3.connect(DB_PATH)
+tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table';").fetchall()
+print("Tables in DB:", tables)
+conn.close()
 
 # ─────────────────────────────────────────────
 # Connection helper
